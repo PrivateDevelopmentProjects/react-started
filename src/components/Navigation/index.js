@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Navigation = () => {
 	const classes = useStyles();
-	const theme = useTheme();
+	// const theme = useTheme();
 	const [open, setOpen] = React.useState(false);
 
 	const handleDrawerOpen = () => {
