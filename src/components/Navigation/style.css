@@ -1,7 +1,11 @@
 .nav {
 	display: flex;
 	justify-content: flex-end;
-	background: linear-gradient(-90deg, #b4c6e0, transparent);
+	background: linear-gradient(
+		-20deg,
+		transparent,
+		hsl(221, 51%, 12%)
+	) !important;
 	opacity: 85%;
 	position: sticky;
 	top: 0;

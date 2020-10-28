@@ -6,9 +6,9 @@ const Header = () => {
 	return (
 		<div className="hero-image">
 			<div className="hero-text">
-				<h1 style={{ fontSize: "50px" }}>I am Adelfo</h1>
-				<h3>And I'm a Builder</h3>
-				<Button variant="outlined" className="btn-style">
+				<h1 style={{ fontSize: "70px" }}>Hi, I'm Adelfo</h1>
+				<h2 style={{ marginBottom: "20px" }}>And I'm a Builder</h2>
+				<Button variant="contained" className="btn-style">
 					<span>Contact Me</span>
 				</Button>
 			</div>

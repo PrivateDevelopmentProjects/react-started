@@ -30,6 +30,7 @@
 	color: white !important;
 	font-weight: bolder !important;
 	font-size: 20px !important;
+	background: linear-gradient(30deg, transparent, #14213d);
 }
 
 .btn-style::before,
@@ -70,5 +71,5 @@
 .btn-style:hover::after {
 	transform: scale(1, 0.1);
 	opacity: 0;
-	background: linear-gradient(-60deg, #91acd2, white);
+	background: linear-gradient(30deg, transparent, #4974d2);
 }
