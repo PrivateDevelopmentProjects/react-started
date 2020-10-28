@@ -1,5 +1,5 @@
 import React from "react";
-import { fade, makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -21,23 +21,13 @@ const useStyles = makeStyles((theme) => ({
 		marginRight: theme.spacing(2),
 	},
 	title: {
-		display: "none",
+		display: "flex",
 		[theme.breakpoints.up("sm")]: {
 			display: "block",
 		},
 	},
 	inputRoot: {
 		color: "inherit",
-	},
-	inputInput: {
-		padding: theme.spacing(1, 1, 1, 0),
-		// vertical padding + font size from searchIcon
-		paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-		transition: theme.transitions.create("width"),
-		width: "100%",
-		[theme.breakpoints.up("md")]: {
-			width: "20ch",
-		},
 	},
 	sectionDesktop: {
 		display: "none",
@@ -135,14 +125,6 @@ const Navigation = () => {
 		<div className={classes.grow}>
 			<AppBar className="nav">
 				<Toolbar>
-					<IconButton
-						edge="start"
-						className={classes.menuButton}
-						color="inherit"
-						aria-label="open drawer"
-					>
-						<MenuIcon />
-					</IconButton>
 					<Typography className={classes.title} variant="h6" noWrap>
 						Adelfo's Builder
 					</Typography>
