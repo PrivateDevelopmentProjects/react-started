@@ -31,6 +31,7 @@
 	font-weight: bolder !important;
 	font-size: 20px !important;
 	background: linear-gradient(30deg, transparent, #14213d);
+	margin-top: 20px;
 }
 
 .btn-style::before,
