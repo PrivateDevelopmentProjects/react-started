@@ -1,145 +1,189 @@
 import React from "react";
-import clsx from "clsx";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
+import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
+import Typography from "@material-ui/core/Typography";
+import InputBase from "@material-ui/core/InputBase";
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
-import HomeWorkRoundedIcon from "@material-ui/icons/HomeWorkRounded";
-import ContactPhoneRoundedIcon from "@material-ui/icons/ContactPhoneRounded";
-import "./style.css";
 
-const drawerWidth = 240;
+import BuildIcon from "@material-ui/icons/Build";
+import AccountCircleOutlined from "@material-ui/icons/AccountCircleOutlined";
+import WorkIcon from "@material-ui/icons/Work";
+import MoreIcon from "@material-ui/icons/MoreVert";
 
 const useStyles = makeStyles((theme) => ({
-	root: {
-		display: "flex",
+	grow: {
+		flexGrow: 1,
 	},
-	appBar: {
-		transition: theme.transitions.create(["margin", "width"], {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.leavingScreen,
-		}),
-	},
-	appBarShift: {
-		width: `calc(100% - ${drawerWidth}px)`,
-		transition: theme.transitions.create(["margin", "width"], {
-			easing: theme.transitions.easing.easeOut,
-			duration: theme.transitions.duration.enteringScreen,
-		}),
-		marginRight: drawerWidth,
+	menuButton: {
+		marginRight: theme.spacing(2),
 	},
 	title: {
-		flexGrow: 1,
-	},
-	hide: {
 		display: "none",
+		[theme.breakpoints.up("sm")]: {
+			display: "block",
+		},
 	},
-	drawer: {
-		width: drawerWidth,
-		flexShrink: 0,
+	inputRoot: {
+		color: "inherit",
 	},
-	drawerPaper: {
-		width: drawerWidth,
+	inputInput: {
+		padding: theme.spacing(1, 1, 1, 0),
+		// vertical padding + font size from searchIcon
+		paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+		transition: theme.transitions.create("width"),
+		width: "100%",
+		[theme.breakpoints.up("md")]: {
+			width: "20ch",
+		},
 	},
-	drawerHeader: {
+	sectionDesktop: {
+		display: "none",
+		[theme.breakpoints.up("md")]: {
+			display: "flex",
+		},
+	},
+	sectionMobile: {
 		display: "flex",
-		alignItems: "center",
-		padding: theme.spacing(0, 1),
-		// necessary for content to be below app bar
-		...theme.mixins.toolbar,
-		justifyContent: "flex-start",
-	},
-	content: {
-		flexGrow: 1,
-		padding: theme.spacing(3),
-		transition: theme.transitions.create("margin", {
-			easing: theme.transitions.easing.sharp,
-			duration: theme.transitions.duration.leavingScreen,
-		}),
-		marginRight: -drawerWidth,
-	},
-	contentShift: {
-		transition: theme.transitions.create("margin", {
-			easing: theme.transitions.easing.easeOut,
-			duration: theme.transitions.duration.enteringScreen,
-		}),
-		marginRight: 0,
+		[theme.breakpoints.up("md")]: {
+			display: "none",
+		},
 	},
 }));
 
 const Navigation = () => {
 	const classes = useStyles();
-	// const theme = useTheme();
-	const [open, setOpen] = React.useState(false);
+	const [anchorEl, setAnchorEl] = React.useState(null);
+	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
-	const handleDrawerOpen = () => {
-		setOpen(true);
+	const isMenuOpen = Boolean(anchorEl);
+	const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+	const handleProfileMenuOpen = (event) => {
+		setAnchorEl(event.currentTarget);
 	};
 
-	const handleDrawerClose = () => {
-		setOpen(false);
+	const handleMobileMenuClose = () => {
+		setMobileMoreAnchorEl(null);
 	};
+
+	const handleMenuClose = () => {
+		setAnchorEl(null);
+		handleMobileMenuClose();
+	};
+
+	const handleMobileMenuOpen = (event) => {
+		setMobileMoreAnchorEl(event.currentTarget);
+	};
+
+	const menuId = "primary-search-account-menu";
+	const renderMenu = (
+		<Menu
+			anchorEl={anchorEl}
+			anchorOrigin={{ vertical: "top", horizontal: "right" }}
+			id={menuId}
+			keepMounted
+			transformOrigin={{ vertical: "top", horizontal: "right" }}
+			open={isMenuOpen}
+			onClose={handleMenuClose}
+		>
+			<MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+			<MenuItem onClick={handleMenuClose}>My account</MenuItem>
+		</Menu>
+	);
+
+	const mobileMenuId = "primary-search-account-menu-mobile";
+	const renderMobileMenu = (
+		<Menu
+			anchorEl={mobileMoreAnchorEl}
+			anchorOrigin={{ vertical: "top", horizontal: "right" }}
+			id={mobileMenuId}
+			keepMounted
+			transformOrigin={{ vertical: "top", horizontal: "right" }}
+			open={isMobileMenuOpen}
+			onClose={handleMobileMenuClose}
+		>
+			<MenuItem>
+				<IconButton aria-label="show 4 new mails" color="inherit">
+					<AccountCircleOutlined />
+				</IconButton>
+				<p>Contact</p>
+			</MenuItem>
+			<MenuItem>
+				<IconButton aria-label="show 11 new notifications" color="inherit">
+					<WorkIcon />
+				</IconButton>
+				<p>Work</p>
+			</MenuItem>
+			<MenuItem onClick={handleProfileMenuOpen}>
+				<IconButton
+					aria-label="account of current user"
+					aria-controls="primary-search-account-menu"
+					aria-haspopup="true"
+					color="inherit"
+				>
+					<BuildIcon />
+				</IconButton>
+				<p>Services</p>
+			</MenuItem>
+		</Menu>
+	);
 
 	return (
-		<div className={classes.root}>
-			<CssBaseline />
-			<AppBar
-				position="fixed"
-				className={clsx(classes.appBar, {
-					[classes.appBarShift]: open,
-				})}
-			>
+		<div className={classes.grow}>
+			<AppBar position="static">
 				<Toolbar>
-					<Typography variant="h6" noWrap className={classes.title}>
-						Adelfo Builder
-					</Typography>
 					<IconButton
+						edge="start"
+						className={classes.menuButton}
 						color="inherit"
 						aria-label="open drawer"
-						edge="end"
-						onClick={handleDrawerOpen}
-						className={clsx(open && classes.hide)}
 					>
 						<MenuIcon />
 					</IconButton>
+					<Typography className={classes.title} variant="h6" noWrap>
+						Adelfo's Builder
+					</Typography>
+
+					<div className={classes.grow} />
+					<div className={classes.sectionDesktop}>
+						<IconButton aria-label="show 4 new mails" color="inherit">
+							<AccountCircleOutlined />
+						</IconButton>
+						<IconButton aria-label="show 17 new notifications" color="inherit">
+							<WorkIcon />
+						</IconButton>
+						<IconButton
+							edge="end"
+							aria-label="account of current user"
+							aria-controls={menuId}
+							aria-haspopup="true"
+							onClick={handleProfileMenuOpen}
+							color="inherit"
+						>
+							<BuildIcon />
+						</IconButton>
+					</div>
+					<div className={classes.sectionMobile}>
+						<IconButton
+							aria-label="show more"
+							aria-controls={mobileMenuId}
+							aria-haspopup="true"
+							onClick={handleMobileMenuOpen}
+							color="inherit"
+						>
+							<MoreIcon />
+						</IconButton>
+					</div>
 				</Toolbar>
 			</AppBar>
-			<Drawer
-				className={classes.drawer}
-				variant="temporary"
-				anchor="right"
-				open={open}
-				classes={{
-					paper: classes.drawerPaper,
-				}}
-			>
-				<Divider />
-				<List>
-					<IconButton onClick={handleDrawerClose}>
-						<AccountCircleIcon />
-					</IconButton>
-				</List>
-				<Divider />
-				<List>
-					<IconButton onClick={handleDrawerClose}>
-						<HomeWorkRoundedIcon />
-					</IconButton>
-				</List>
-				<Divider />
-				<List>
-					<IconButton onClick={handleDrawerClose}>
-						<ContactPhoneRoundedIcon />
-					</IconButton>
-				</List>
-			</Drawer>
+			{renderMobileMenu}
+			{renderMenu}
 		</div>
 	);
 };
+
 export default Navigation;
