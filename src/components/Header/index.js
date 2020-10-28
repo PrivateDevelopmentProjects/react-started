@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 import "./style.css";
 
 const Header = () => {
@@ -7,7 +8,9 @@ const Header = () => {
 			<div className="hero-text">
 				<h1 style={{ fontSize: "50px" }}>I am Adelfo</h1>
 				<h3>And I'm a Builder</h3>
-				<button>Contact me</button>
+				<Button variant="outlined" className="btn-style">
+					<span>Contact Me</span>
+				</Button>
 			</div>
 		</div>
 	);

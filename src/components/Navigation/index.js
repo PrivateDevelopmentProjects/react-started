@@ -4,15 +4,14 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import MenuIcon from "@material-ui/icons/Menu";
-
 import BuildIcon from "@material-ui/icons/Build";
 import AccountCircleOutlined from "@material-ui/icons/AccountCircleOutlined";
 import WorkIcon from "@material-ui/icons/Work";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -134,7 +133,7 @@ const Navigation = () => {
 
 	return (
 		<div className={classes.grow}>
-			<AppBar position="static">
+			<AppBar className="nav">
 				<Toolbar>
 					<IconButton
 						edge="start"

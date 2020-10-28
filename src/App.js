@@ -10,9 +10,9 @@ import "./App.css";
 const App = () => {
 	return (
 		<>
-			<Navigation />
 			<div className="app-style">
 				<div>
+					<Navigation />
 					<Header />
 				</div>
 				<div>
