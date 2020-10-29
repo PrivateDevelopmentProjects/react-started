@@ -11,3 +11,12 @@
 	top: 0;
 	color: rgb(45, 40, 40);
 }
+
+.MuiPaper-root {
+	color: hsl(221, 51%, 12%) !important;
+	font-size: 50px !important;
+}
+
+.MuiPaper-root:hover {
+	color: blue;
+}

@@ -6,7 +6,7 @@
 .hero-image {
 	background-image: url("header.jpg");
 	background-color: #cccccc;
-	height: 500px;
+	height: 650px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -55,6 +55,7 @@
 	);
 	transform: scale(1, 0.1);
 	color: rgb(69, 50, 4) !important;
+	box-shadow: 3px 1px 10px #561616 !important;
 }
 
 .btn-style:hover::before {

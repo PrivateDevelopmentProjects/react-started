@@ -3,15 +3,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
-import BuildIcon from "@material-ui/icons/Build";
+import BuildOutlined from "@material-ui/icons/BuildOutlined";
 import AccountCircleOutlined from "@material-ui/icons/AccountCircleOutlined";
-import WorkIcon from "@material-ui/icons/Work";
+import WorkOutlineOutlined from "@material-ui/icons/WorkOutlineOutlined";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import Avatar from "@material-ui/core/Avatar";
 import "./style.css";
+import logo from "./logo.png";
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -103,7 +103,7 @@ const Navigation = () => {
 			</MenuItem>
 			<MenuItem>
 				<IconButton aria-label="show 11 new notifications" color="inherit">
-					<WorkIcon />
+					<WorkOutlineOutlined />
 				</IconButton>
 				<p>Work</p>
 			</MenuItem>
@@ -114,7 +114,7 @@ const Navigation = () => {
 					aria-haspopup="true"
 					color="inherit"
 				>
-					<BuildIcon />
+					<BuildOutlined />
 				</IconButton>
 				<p>Services</p>
 			</MenuItem>
@@ -125,17 +125,14 @@ const Navigation = () => {
 		<div className={classes.grow}>
 			<AppBar className="nav">
 				<Toolbar>
-					<Typography className={classes.title} variant="h6" noWrap>
-						Adelfo's Builder
-					</Typography>
-
+					<Avatar alt="logo" src={logo} className={classes.large} />
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
 						<IconButton aria-label="show 4 new mails" color="inherit">
 							<AccountCircleOutlined />
 						</IconButton>
 						<IconButton aria-label="show 17 new notifications" color="inherit">
-							<WorkIcon />
+							<WorkOutlineOutlined />
 						</IconButton>
 						<IconButton
 							edge="end"
@@ -145,7 +142,7 @@ const Navigation = () => {
 							onClick={handleProfileMenuOpen}
 							color="inherit"
 						>
-							<BuildIcon />
+							<BuildOutlined />
 						</IconButton>
 					</div>
 					<div className={classes.sectionMobile}>
