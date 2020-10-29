@@ -1,0 +1,9 @@
+.service {
+	color: black;
+	font-weight: lighter !important;
+}
+
+.avatar-style {
+	height: 80px !important;
+	width: 80px !important;
+}

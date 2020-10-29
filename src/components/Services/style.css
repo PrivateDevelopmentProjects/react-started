@@ -1,0 +1,10 @@
+.services {
+	padding: 30px;
+	text-align: center;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	background-color: whitesmoke;
+	min-height: 600px !important;
+}
