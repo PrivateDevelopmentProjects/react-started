@@ -1,0 +1,22 @@
+.nav {
+	display: flex;
+	justify-content: flex-end;
+	background: linear-gradient(
+		-20deg,
+		transparent,
+		hsl(221, 51%, 12%)
+	) !important;
+	opacity: 85%;
+	position: sticky;
+	top: 0;
+	color: rgb(45, 40, 40);
+}
+
+.MuiPaper-root {
+	color: hsl(221, 51%, 12%) !important;
+	font-size: 50px !important;
+}
+
+.MuiPaper-root:hover {
+	color: blue;
+}
