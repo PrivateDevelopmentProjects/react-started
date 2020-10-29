@@ -9,7 +9,7 @@ import BuildOutlined from "@material-ui/icons/BuildOutlined";
 import AccountCircleOutlined from "@material-ui/icons/AccountCircleOutlined";
 import WorkOutlineOutlined from "@material-ui/icons/WorkOutlineOutlined";
 import MoreIcon from "@material-ui/icons/MoreVert";
-import Avatar from "@material-ui/core/Avatar";
+import { Avatar, Link } from "@material-ui/core";
 import "./style.css";
 import logo from "./logo.png";
 
@@ -78,10 +78,7 @@ const Navigation = () => {
 			transformOrigin={{ vertical: "top", horizontal: "right" }}
 			open={isMenuOpen}
 			onClose={handleMenuClose}
-		>
-			<MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-			<MenuItem onClick={handleMenuClose}>My account</MenuItem>
-		</Menu>
+		></Menu>
 	);
 
 	const mobileMenuId = "primary-search-account-menu-mobile";
@@ -125,7 +122,9 @@ const Navigation = () => {
 		<div className={classes.grow}>
 			<AppBar className="nav">
 				<Toolbar>
-					<Avatar alt="logo" src={logo} className={classes.large} />
+					<Link href="/">
+						<Avatar alt="logo" src={logo} className={classes.large} />
+					</Link>
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
 						<IconButton aria-label="show 4 new mails" color="inherit">
