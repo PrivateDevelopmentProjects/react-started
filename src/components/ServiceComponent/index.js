@@ -10,10 +10,10 @@ const Service = ({ image, title, description }) => {
 				<Avatar src={image} className="avatar-style" />
 			</Fade>
 			<Slide right>
-				<h2>{title}</h2>
+				<span className="title">{title}</span>
 			</Slide>
 			<Zoom bottom>
-				<h3>{description}</h3>
+				<span className="description">{description}</span>
 			</Zoom>
 		</div>
 	);

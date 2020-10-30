@@ -1,10 +1,10 @@
 .services {
-	padding: 30px;
+	padding-top: 50px;
 	text-align: center;
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	background-color: whitesmoke;
 	min-height: 600px !important;
 }
