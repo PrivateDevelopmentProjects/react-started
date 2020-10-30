@@ -3,8 +3,7 @@
 	text-align: center;
 	display: flex;
 	justify-content: space-evenly;
-	flex-direction: row;
 	flex-wrap: wrap;
-	background-color: whitesmoke;
+	background-color: #e5e5e5;
 	min-height: 600px !important;
 }
