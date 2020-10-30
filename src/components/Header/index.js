@@ -1,7 +1,7 @@
 import React from "react";
+import { Fade, Slide, Zoom } from "react-reveal";
 import Button from "@material-ui/core/Button";
 import "./style.css";
-import { Fade, Slide, Zoom } from "react-reveal";
 
 const Header = () => {
 	return (

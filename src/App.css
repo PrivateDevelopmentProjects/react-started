@@ -14,8 +14,8 @@
 }
 
 .app-style {
-	background-image: linear-gradient(to bottom right, white, #14213d);
-	height: 200vh;
+	height: 100%;
+	padding-bottom: 30px;
 }
 
 .App-link {
