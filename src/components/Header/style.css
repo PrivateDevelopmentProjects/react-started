@@ -1,5 +1,5 @@
 .header {
-	min-height: 60vh;
+	min-height: 90vh;
 	text-align: center;
 }
 
@@ -10,9 +10,9 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	flex-wrap: wrap;
-	align-items: flex-end;
+	justify-content: space-between;
 }
 
 .hero-text {
@@ -22,8 +22,8 @@
 	flex-wrap: wrap;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 150px;
-	padding-right: 90px;
+	padding-top: 200px;
+	padding-left: 100px;
 }
 
 .btn-style {
@@ -35,4 +35,11 @@
 
 .images {
 	padding-top: 150px;
+}
+
+.header-icons {
+	padding-top: 50px !important;
+	font-size: 30px !important;
+	display: flex;
+	justify-items: center;
 }

@@ -17,7 +17,7 @@ const Header = () => {
 							fontFamily: "Inconsolata",
 						}}
 					>
-						Adelfo Gonzalez
+						A.G Residential Landscapes
 					</h3>
 					<hr
 						style={{
@@ -29,18 +29,10 @@ const Header = () => {
 					></hr>
 				</Fade>
 				<Slide bottom>
-					<h4
-						style={{
-							fontSize: "25px",
-							fontFamily: "Inconsolata",
-						}}
-					>
-						Residential Landscapes
-					</h4>
-					<IconButton aria-label="show 11 new notifications" color="green">
+					<div className="header-icons">
 						<PhoneInTalk />
 						<EmailRounded />
-					</IconButton>
+					</div>
 				</Slide>
 			</div>
 
