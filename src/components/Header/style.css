@@ -5,11 +5,14 @@
 
 .hero-image {
 	background-image: url("header.jpg");
-	background-color: #cccccc;
 	height: 650px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-end;
 }
 
 .hero-text {
@@ -28,4 +31,8 @@
 	font-size: 20px !important;
 	margin-top: 20px;
 	border-radius: 40px !important;
+}
+
+.images {
+	padding-top: 150px;
 }

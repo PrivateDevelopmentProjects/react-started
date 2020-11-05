@@ -17,13 +17,13 @@
 }
 
 .MuiSvgIcon-root {
-	fill: #001d3d !important;
+	fill: #432818 !important;
 	width: 2em !important;
 	font-size: 1.3em !important;
 }
 
 .MuiSvgIcon-root:hover {
-	box-shadow: 0 0 3px #16679a, 0 0 5px #43a8ba !important;
+	box-shadow: 0 0 3px #70e000, 0 0 5px #008000 !important;
 	border-radius: 80px !important;
 }
 

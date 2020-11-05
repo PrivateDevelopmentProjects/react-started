@@ -1,6 +1,8 @@
 import React from "react";
-import { Fade, Slide } from "react-reveal";
+import { Fade, Slide, Zoom } from "react-reveal";
 import "./style.css";
+
+import img2 from "./img2.png";
 
 const Header = () => {
 	return (
@@ -28,6 +30,12 @@ const Header = () => {
 						And I'm a Constructor
 					</h2>
 				</Slide>
+			</div>
+
+			<div className="images">
+				<Zoom bottom>
+					<img src={img2} alt="avatar2" />
+				</Zoom>
 			</div>
 		</div>
 	);
