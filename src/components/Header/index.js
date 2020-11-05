@@ -1,5 +1,7 @@
 import React from "react";
 import { Fade, Slide, Zoom } from "react-reveal";
+import { PhoneInTalk, EmailRounded } from "@material-ui/icons/";
+import IconButton from "@material-ui/core/IconButton";
 import "./style.css";
 
 import img2 from "./img2.png";
@@ -35,6 +37,10 @@ const Header = () => {
 					>
 						Residential Landscapes
 					</h4>
+					<IconButton aria-label="show 11 new notifications" color="green">
+						<PhoneInTalk />
+						<EmailRounded />
+					</IconButton>
 				</Slide>
 			</div>
 
