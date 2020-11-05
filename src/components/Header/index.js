@@ -9,26 +9,32 @@ const Header = () => {
 		<div className="hero-image">
 			<div className="hero-text">
 				<Fade top>
-					<h1
+					<h3
 						style={{
-							fontSize: "60px",
-							marginBottom: "10px",
-							fontFamily: "roboto",
+							fontSize: "35px",
+							fontFamily: "Inconsolata",
 						}}
 					>
-						Hi, I'm Adelfo
-					</h1>
+						Adelfo Gonzalez
+					</h3>
+					<hr
+						style={{
+							height: "2px",
+							width: "60px",
+							backgroundColor: "#38b000",
+							textShadow: "0 0 3px #008000, 0 0 #00b2ca",
+						}}
+					></hr>
 				</Fade>
 				<Slide bottom>
-					<h2
+					<h4
 						style={{
-							marginBottom: "15px",
-							fontSize: "40px",
-							fontFamily: "roboto",
+							fontSize: "25px",
+							fontFamily: "Inconsolata",
 						}}
 					>
-						And I'm a Constructor
-					</h2>
+						Residential Landscapes
+					</h4>
 				</Slide>
 			</div>
 
