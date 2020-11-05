@@ -10,7 +10,7 @@ const Header = () => {
 				<Fade top>
 					<h1
 						style={{
-							fontSize: "100px",
+							fontSize: "80px",
 							marginBottom: "10px",
 							fontFamily: "roboto",
 							borderRadius: "30px",
@@ -23,7 +23,7 @@ const Header = () => {
 					<h2
 						style={{
 							marginBottom: "20px",
-							fontSize: "60px",
+							fontSize: "55px",
 							fontFamily: "roboto",
 						}}
 					>
