@@ -9,7 +9,6 @@
 	opacity: 85%;
 	position: sticky;
 	top: 0;
-	color: rgb(45, 40, 40);
 }
 
 .MuiPaper-root {
@@ -17,6 +16,22 @@
 	font-size: 50px !important;
 }
 
-.MuiPaper-root:hover {
-	color: blue;
+.MuiSvgIcon-root {
+	fill: #001d3d !important;
+	width: 2em !important;
+	font-size: 1.3em !important;
+}
+
+.MuiSvgIcon-root:hover {
+	box-shadow: 0 0 3px #16679a, 0 0 5px #43a8ba !important;
+	border-radius: 80px !important;
+}
+
+.MuiAvatar-root {
+	width: 60px !important;
+	padding: 3px !important;
+}
+
+.MuiAvatar-root:hover {
+	box-shadow: 0 0 3px #16679a, 0 0 5px #43a8ba !important;
 }

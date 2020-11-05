@@ -1,6 +1,5 @@
 import React from "react";
-import { Fade, Slide, Zoom } from "react-reveal";
-import Button from "@material-ui/core/Button";
+import { Fade, Slide } from "react-reveal";
 import "./style.css";
 
 const Header = () => {
@@ -10,10 +9,9 @@ const Header = () => {
 				<Fade top>
 					<h1
 						style={{
-							fontSize: "80px",
+							fontSize: "60px",
 							marginBottom: "10px",
 							fontFamily: "roboto",
-							borderRadius: "30px",
 						}}
 					>
 						Hi, I'm Adelfo
@@ -22,19 +20,14 @@ const Header = () => {
 				<Slide bottom>
 					<h2
 						style={{
-							marginBottom: "20px",
-							fontSize: "55px",
+							marginBottom: "15px",
+							fontSize: "40px",
 							fontFamily: "roboto",
 						}}
 					>
-						And I'm a Builder
+						And I'm a Constructor
 					</h2>
 				</Slide>
-				<Zoom>
-					<Button variant="contained" className="btn-style">
-						<span>Contact Me</span>
-					</Button>
-				</Zoom>
 			</div>
 		</div>
 	);
