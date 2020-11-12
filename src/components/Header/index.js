@@ -1,43 +1,28 @@
 import React from "react";
 import { Fade, Slide, Zoom } from "react-reveal";
 import Button from "@material-ui/core/Button";
+import { Link, animateScroll as scroll } from "react-scroll";
 import "./style.css";
 
 const Header = () => {
-	return (
-		<div className="hero-image">
-			<div className="hero-text">
-				<Fade top>
-					<h1
-						style={{
-							fontSize: "100px",
-							marginBottom: "10px",
-							fontFamily: "roboto",
-							borderRadius: "30px",
-						}}
-					>
-						Hi, I'm Adelfo
-					</h1>
-				</Fade>
-				<Slide bottom>
-					<h2
-						style={{
-							marginBottom: "20px",
-							fontSize: "60px",
-							fontFamily: "roboto",
-						}}
-					>
-						And I'm a Builder
-					</h2>
-				</Slide>
-				<Zoom>
-					<Button variant="contained" className="btn-style">
-						<span>Contact Me</span>
-					</Button>
-				</Zoom>
-			</div>
-		</div>
-	);
+  return (
+    <div className="hero-image full-height-section">
+      <div className="hero-text">
+        <Fade top>
+          <h1>A.G. Residential Landscapes</h1>
+        </Fade>
+        <Slide bottom>
+          <h3>helping you create that vision of your dream house</h3>
+        </Slide>
+        <Zoom>
+          <Link smooth={true} offset={-70} duration={500} to="contact">
+            <Button variant="outlined">Let's Start That Project Today</Button>
+            <p>(512) 123-4567</p>
+          </Link>
+        </Zoom>
+      </div>
+    </div>
+  );
 };
 
 export default Header;

@@ -8,26 +8,16 @@ import Work from "./components/Work";
 import "./App.css";
 
 const App = () => {
-	return (
-		<>
-			<div className="app-style">
-				<div>
-					<Navigation />
-					<Header />
-				</div>
-				<div>
-					<Services />
-				</div>
-				<div>
-					<Work />
-				</div>
-				<div>
-					<Contact />
-					<Footer />
-				</div>
-			</div>
-		</>
-	);
+  return (
+    <div className="app-style">
+      <Navigation />
+      <Header />
+      <Services />
+      <Work />
+      <Contact />
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
