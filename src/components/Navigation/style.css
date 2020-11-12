@@ -1,22 +1,17 @@
 .nav {
-	display: flex;
-	justify-content: flex-end;
-	background: linear-gradient(
-		-20deg,
-		transparent,
-		hsl(221, 51%, 12%)
-	) !important;
-	opacity: 85%;
-	position: sticky;
-	top: 0;
-	color: rgb(45, 40, 40);
+  display: flex;
+  justify-content: flex-end;
+  background: linear-gradient(0deg, transparent, hsl(135, 78%, 9%)) !important;
+  opacity: 85%;
+  position: sticky;
+  top: 0;
+  color: white;
 }
 
-.MuiPaper-root {
-	color: hsl(221, 51%, 12%) !important;
-	font-size: 50px !important;
+.MuiButton-root {
+  color: white !important;
 }
 
-.MuiPaper-root:hover {
-	color: blue;
+.MuiButton-root:hover {
+  color: hsl(151, 27%, 69%) !important;
 }
