@@ -8,10 +8,10 @@
   color: white;
 }
 
-.MuiButton-root {
+.nav .MuiButton-root {
   color: white !important;
 }
 
-.MuiButton-root:hover {
+.nav .MuiButton-root:hover {
   color: hsl(151, 27%, 69%) !important;
 }
