@@ -1,8 +1,11 @@
 import React from "react";
 import { Fade, Slide, Zoom } from "react-reveal";
+import { PhoneInTalk, EmailRounded } from "@material-ui/icons/";
 import Button from "@material-ui/core/Button";
 import { Link, animateScroll as scroll } from "react-scroll";
 import "./style.css";
+
+import img2 from "./img2.png";
 
 const Header = () => {
   return (
@@ -16,8 +19,12 @@ const Header = () => {
         </Slide>
         <Zoom>
           <Link smooth={true} offset={-70} duration={500} to="contact">
-            <Button variant="outlined">Let's Start That Project Today</Button>
-            <p>(512) 123-4567</p>
+            <Button variant="outlined">
+              <EmailRounded /> Let's Start That Project Today
+            </Button>
+            <p>
+              <PhoneInTalk /> (512) 123-4567
+            </p>
           </Link>
         </Zoom>
       </div>
