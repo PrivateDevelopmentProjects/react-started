@@ -1,25 +1,28 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Input from "@material-ui/core/Input";
-import InputLabel from "@material-ui/core/InputLabel";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControl from "@material-ui/core/FormControl";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
-import AccountCircle from "@material-ui/icons/AccountCircle";
+import { AccountCircle, PhoneInTalk, EmailRounded } from "@material-ui/icons/";
+import { Button } from "@material-ui/core";
+import { Slide, Zoom } from "react-reveal";
 
 const useStyles = makeStyles((theme) => ({
   section: {
     paddingTop: "63.99px",
-    minHeight: "60vh",
+    minHeight: "100vh",
     marginTop: "30px",
     textAlign: "center",
+    backgroundColor: theme.palette.background.default,
   },
   margin: {
     margin: theme.spacing(1),
   },
   spaced: {
-    marginTop: theme.spacing(5),
+    padding: theme.spacing(5),
+  },
+  right: {
+    float: "right",
   },
 }));
 
@@ -28,46 +31,87 @@ const Contact = () => {
 
   return (
     <div className={classes.section} id="contact">
-      <h1>Let's Start That Project Today</h1>
-      <h3>Yes! Our estimates are always free</h3>
-      <h4 className={classes.spaced}>
-        Please, tell us how we can help. Include your contact information and
-        our team will give you a call in the next 24 hours.
-      </h4>
-      {/* <Grid container spacing={3} justify="center" className={classes.spaced}>
-        <Grid item>
-          <FormControl fullWidth className={classes.margin}>
-            <InputLabel htmlFor="input-with-icon-adornment">
-              Your Name
-            </InputLabel>
-            <Input
-              id="name"
-              placeholder="Tell us who to contact"
-              startAdornment={
-                <InputAdornment position="start">
-                  <AccountCircle />
-                </InputAdornment>
-              }
+      <Zoom>
+        <h1>Let's Start That Project Today</h1>
+        <h4>
+          Include your contact information and our team will give you a call in
+          the next 48 hours.
+        </h4>
+        <Button color="primary" href="tel:5124296064">
+          <PhoneInTalk color="primary" />
+          (512) 429-6064
+        </Button>
+      </Zoom>
+      <Slide bottom>
+        <Grid
+          container
+          spacing={3}
+          direction="column"
+          justify="center"
+          alignItems="center"
+          className={classes.spaced}
+        >
+          <form>
+            <TextField
+              fullWidth
+              className={classes.margin}
+              id="contact-name-field"
+              label="Name"
+              placeholder="Who is contacting us"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <AccountCircle color="primary" />
+                  </InputAdornment>
+                ),
+              }}
             />
-          </FormControl>
-        </Grid>
-        <Grid item>
-          <FormControl fullWidth className={classes.margin}>
-            <InputLabel htmlFor="input-with-icon-adornment">
-              Your Name
-            </InputLabel>
-            <Input
-              id="name"
-              placeholder="Tell us who to contact"
-              startAdornment={
-                <InputAdornment position="start">
-                  <AccountCircle />
-                </InputAdornment>
-              }
+            <TextField
+              fullWidth
+              className={classes.margin}
+              id="contact-phone-field"
+              label="Phone"
+              placeholder="Provide us a phone number if we can reach by phone"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <PhoneInTalk color="primary" />
+                  </InputAdornment>
+                ),
+              }}
             />
-          </FormControl>
+            <TextField
+              fullWidth
+              className={classes.margin}
+              id="contact-email-field"
+              label="Email"
+              placeholder="Provide us an email if we can reach by email"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <EmailRounded color="primary" />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <TextField
+              fullWidth
+              className={classes.margin}
+              rows={10}
+              multiline
+              id="contact-text-field"
+              placeholder="Please, tell us how we can help"
+            />
+            <Button
+              variant="contained"
+              color="primary"
+              className={classes.right}
+            >
+              Send
+            </Button>
+          </form>
         </Grid>
-      </Grid> */}
+      </Slide>
     </div>
   );
 };
