@@ -42,6 +42,15 @@ const useStyles = makeStyles((theme) => ({
       display: "none",
     },
   },
+  mobile_nav: {
+    background: theme.palette.primary.light,
+  },
+  button: {
+    color: "white",
+    "&:hover": {
+      color: theme.palette.primary.light,
+    },
+  },
 }));
 
 const Navigation = () => {
@@ -82,19 +91,25 @@ const Navigation = () => {
 
   const ServicesLink = (
     <Link smooth={true} offset={-70} duration={500} to="services">
-      <Button startIcon={<BuildOutlined />}>Our Services</Button>
+      <Button startIcon={<BuildOutlined />} className={classes.button}>
+        Our Services
+      </Button>
     </Link>
   );
 
   const WorkLink = (
     <Link smooth={true} offset={-70} duration={500} to="work">
-      <Button startIcon={<WorkOutlineOutlined />}>Our Work</Button>
+      <Button startIcon={<WorkOutlineOutlined />} className={classes.button}>
+        Our Work
+      </Button>
     </Link>
   );
 
   const ContactLink = (
     <Link smooth={true} offset={-70} duration={500} to="contact">
-      <Button startIcon={<EmailOutlined />}>Contact Us</Button>
+      <Button startIcon={<EmailOutlined />} className={classes.button}>
+        Contact Us
+      </Button>
     </Link>
   );
 
@@ -108,9 +123,9 @@ const Navigation = () => {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>{ServicesLink}</MenuItem>
-      <MenuItem>{WorkLink}</MenuItem>
-      <MenuItem>{ContactLink}</MenuItem>
+      <MenuItem className={classes.mobile_nav}>{ServicesLink}</MenuItem>
+      <MenuItem className={classes.mobile_nav}>{WorkLink}</MenuItem>
+      <MenuItem className={classes.mobile_nav}>{ContactLink}</MenuItem>
     </Menu>
   );
 

@@ -3,14 +3,38 @@ import { Fade, Slide, Zoom } from "react-reveal";
 import { PhoneInTalk, EmailRounded } from "@material-ui/icons/";
 import Button from "@material-ui/core/Button";
 import { Link, animateScroll as scroll } from "react-scroll";
-import "./style.css";
+import { makeStyles } from "@material-ui/core/styles";
 
-import img2 from "./img2.png";
+import BackgroundImage from "./header.jpg";
+
+const useStyles = makeStyles((theme) => ({
+  hero_image: {
+    backgroundImage: `url(${BackgroundImage})`,
+    backgroundColor: "#cccccc",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    minHeight: "100vh",
+  },
+  hero_text: {
+    textAlign: "center",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    color: "white",
+  },
+  rp: {
+    paddingRight: theme.spacing(1),
+  },
+}));
 
 const Header = () => {
+  const classes = useStyles();
+
   return (
-    <div className="hero-image full-height-section">
-      <div className="hero-text">
+    <div className={classes.hero_image}>
+      <div className={classes.hero_text}>
         <Fade top>
           <h1>A.G. Residential Landscapes</h1>
         </Fade>
@@ -19,13 +43,15 @@ const Header = () => {
         </Slide>
         <Zoom>
           <Link smooth={true} offset={-70} duration={500} to="contact">
-            <Button variant="outlined">
-              <EmailRounded /> Let's Start That Project Today
+            <Button color="secondary" variant="outlined">
+              <EmailRounded className={classes.rp} /> Let's Start That Project
+              Today
             </Button>
-            <p>
-              <PhoneInTalk /> (512) 123-4567
-            </p>
           </Link>
+          <Button color="secondary" href="tel:5124296064">
+            <PhoneInTalk className={classes.rp} />
+            (512) 429-6064
+          </Button>
         </Zoom>
       </div>
     </div>

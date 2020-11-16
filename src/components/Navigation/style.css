@@ -7,11 +7,3 @@
   top: 0;
   color: white;
 }
-
-.MuiButton-root {
-  color: white !important;
-}
-
-.MuiButton-root:hover {
-  color: hsl(151, 27%, 69%) !important;
-}
