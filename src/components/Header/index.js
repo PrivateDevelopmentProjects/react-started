@@ -2,7 +2,7 @@ import React from "react";
 import { Fade, Slide, Zoom } from "react-reveal";
 import { PhoneInTalk, EmailRounded } from "@material-ui/icons/";
 import Button from "@material-ui/core/Button";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { makeStyles } from "@material-ui/core/styles";
 
 import BackgroundImage from "./header.jpg";
