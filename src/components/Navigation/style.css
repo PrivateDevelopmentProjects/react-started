@@ -1,9 +1,0 @@
-.nav {
-  display: flex;
-  justify-content: flex-end;
-  background: linear-gradient(0deg, transparent, hsl(135, 78%, 9%)) !important;
-  opacity: 85%;
-  position: sticky;
-  top: 0;
-  color: white;
-}

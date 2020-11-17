@@ -100,6 +100,8 @@ const Contact = () => {
                 rows={10}
                 multiline
                 id="contact-text-field"
+                variant="outlined"
+                label="Message"
                 placeholder="Please, tell us how we can help"
               />
               <Button

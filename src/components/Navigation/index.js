@@ -11,12 +11,14 @@ import WorkOutlineOutlined from "@material-ui/icons/WorkOutlineOutlined";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import { Avatar, Button } from "@material-ui/core";
 import { Link, animateScroll as scroll } from "react-scroll";
-import "./style.css";
 import logo from "./logo.png";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
+  },
+  nav: {
+    backgroundColor: "rgba(255,255,255, 0.2)",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -46,9 +48,9 @@ const useStyles = makeStyles((theme) => ({
     background: theme.palette.primary.light,
   },
   button: {
-    color: "white",
+    color: theme.palette.primary.light,
     "&:hover": {
-      color: theme.palette.primary.light,
+      color: theme.palette.primary.dark,
     },
   },
 }));
@@ -131,7 +133,7 @@ const Navigation = () => {
 
   return (
     <div className={classes.grow}>
-      <AppBar className="nav">
+      <AppBar className={classes.nav}>
         <Toolbar>
           <Link
             smooth={true}

@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   section: {
     padding: theme.spacing(20, 0),
     textAlign: "center",
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
   },
   root: {
     display: "flex",
