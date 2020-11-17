@@ -10,7 +10,7 @@ import { Slide, Zoom } from "react-reveal";
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    padding: theme.spacing(20),
+    padding: theme.spacing(20, 0),
     textAlign: "center",
     backgroundColor: theme.palette.background.default,
   },
@@ -30,18 +30,18 @@ const Contact = () => {
 
   return (
     <div className={classes.section} id="contact">
-      <Zoom>
-        <h1>Let's Start That Project Today</h1>
-        <h4>
-          Include your contact information and our team will give you a call in
-          the next 48 hours.
-        </h4>
-        <Button color="primary" href="tel:5124296064">
-          <PhoneInTalk color="primary" />
-          (512) 429-6064
-        </Button>
-      </Zoom>
       <Container>
+        <Zoom>
+          <h1>Let's Start That Project Today</h1>
+          <h4>
+            Include your contact information and our team will give you a call
+            in the next 48 hours.
+          </h4>
+          <Button color="primary" href="tel:5124296064">
+            <PhoneInTalk color="primary" />
+            (512) 429-6064
+          </Button>
+        </Zoom>
         <Slide bottom>
           <Grid
             container
@@ -100,6 +100,8 @@ const Contact = () => {
                 rows={10}
                 multiline
                 id="contact-text-field"
+                variant="outlined"
+                label="Message"
                 placeholder="Please, tell us how we can help"
               />
               <Button

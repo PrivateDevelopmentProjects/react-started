@@ -7,12 +7,11 @@ import img2 from "./img2.svg";
 import img3 from "./img3.svg";
 import { Slide } from "react-reveal";
 import Container from "@material-ui/core/Container";
-import { ThreeDRotation } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   section: {
+    padding: theme.spacing(20, 0),
     textAlign: "center",
-    padding: theme.spacing(20),
     backgroundColor: theme.palette.background.default,
   },
   serviceList: {
@@ -25,7 +24,7 @@ const Services = () => {
   const classes = useStyles();
   return (
     <div id="services" className={classes.section}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Slide bottom>
           <h3>
             Our number one goal is to provide the highest quality of service

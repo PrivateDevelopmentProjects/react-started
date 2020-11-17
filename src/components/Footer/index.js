@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
+import { Button, Container } from "@material-ui/core";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
@@ -9,11 +9,10 @@ import Terms from "./terms";
 
 const useStyles = makeStyles((theme) => ({
   section: {
-    padding: theme.spacing(5),
+    padding: theme.spacing(10, 0),
     textAlign: "center",
     borderTop: "1px solid",
-    borderColor: theme.palette.primary.light,
-    color: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.main,
   },
   modal: {
     display: "flex",
@@ -23,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     backgroundColor: theme.palette.background.paper,
-    // boxShadow: theme.shadows[5],
+    boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
     maxHeight: "80vh",
     maxWidth: "80%",
@@ -56,50 +55,47 @@ const Footer = () => {
 
   return (
     <div id="footer" className={classes.section}>
-      <p>
-        © {year} A.G. Residential Landscapes |
-        <Button color="primary" onClick={handleOpenPrivacy}>
-          Privacy
-        </Button>{" "}
-        |{" "}
-        <Button color="primary" onClick={handleOpenTerms}>
-          Terms
-        </Button>
-      </p>
+      <Container>
+        <p>
+          © {year} A.G. Residential Landscapes |
+          <Button onClick={handleOpenPrivacy}>Privacy</Button> |{" "}
+          <Button onClick={handleOpenTerms}>Terms</Button>
+        </p>
 
-      <Modal
-        className={classes.modal}
-        open={openPrivacy}
-        onClose={handleClosePrivacy}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={openPrivacy}>
-          <div className={classes.paper}>
-            <Privacy />
-          </div>
-        </Fade>
-      </Modal>
+        <Modal
+          className={classes.modal}
+          open={openPrivacy}
+          onClose={handleClosePrivacy}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={openPrivacy}>
+            <div className={classes.paper}>
+              <Privacy />
+            </div>
+          </Fade>
+        </Modal>
 
-      <Modal
-        className={classes.modal}
-        open={openTerms}
-        onClose={handleCloseTerms}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={openTerms}>
-          <div className={classes.paper}>
-            <Terms />
-          </div>
-        </Fade>
-      </Modal>
+        <Modal
+          className={classes.modal}
+          open={openTerms}
+          onClose={handleCloseTerms}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={openTerms}>
+            <div className={classes.paper}>
+              <Terms />
+            </div>
+          </Fade>
+        </Modal>
+      </Container>
     </div>
   );
 };
