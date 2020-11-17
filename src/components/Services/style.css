@@ -1,9 +1,0 @@
-.services {
-	padding-top: 50px;
-	text-align: center;
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	background-color: #e5e5e5;
-	min-height: 600px !important;
-}
